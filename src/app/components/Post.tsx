@@ -5,7 +5,7 @@ type PostProps = {
   post: PostType;
 };
 
-const Post = (props: PostProps) => {
+export default function Post(props: PostProps) {
   const { post } = props;
   return (
     <div>
@@ -18,6 +18,4 @@ const Post = (props: PostProps) => {
       </Link>
     </div>
   );
-};
-
-export default Post;
+}

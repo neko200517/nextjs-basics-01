@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Blog',
 };
 
-const Blog = async () => {
+export default async function Blog() {
   const posts = await getAllPostsData();
 
   return (
@@ -14,6 +14,4 @@ const Blog = async () => {
       {posts && posts.map((post) => <Post key={post.id} post={post} />)}
     </ul>
   );
-};
-
-export default Blog;
+}

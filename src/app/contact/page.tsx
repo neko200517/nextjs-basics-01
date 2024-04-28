@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Contact',
 };
 
-const Contact = () => {
+export default function Contact() {
   return (
     <div className='bg-white text-center shadow-xl p-8 w-80 rounded'>
       <div className='mt-4'>
@@ -56,6 +56,4 @@ const Contact = () => {
       </div>
     </div>
   );
-};
-
-export default Contact;
+}

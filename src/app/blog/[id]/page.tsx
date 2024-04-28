@@ -7,7 +7,11 @@ export const generateStaticParams = async () => {
   return getAllPostIds();
 };
 
-const BlogDetail = async ({ params }: { params: { id: string } }) => {
+export default async function BlogDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
   const post = await getPsotDataById(params.id);
 
   return (
@@ -32,6 +36,4 @@ const BlogDetail = async ({ params }: { params: { id: string } }) => {
       </Link>
     </Suspense>
   );
-};
-
-export default BlogDetail;
+}
